@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import logo from "@/asset/logo.png";
 
 export default function HomePage() {
   return (
@@ -10,9 +12,14 @@ export default function HomePage() {
             <p className="font-mono text-sm uppercase tracking-[0.2em] text-accent">
               Verdadeiro ou Falso
             </p>
-            <h1 className="text-balance text-5xl font-semibold leading-[1.05] sm:text-6xl">
-              Claude Code <span className="text-accent">Quiz</span>
-            </h1>
+            <h1 className="sr-only">Claude Code Quiz</h1>
+            <Image
+              src={logo}
+              alt="Claude Code Quiz"
+              priority
+              placeholder="blur"
+              className="h-auto w-full max-w-[12rem] opacity-90"
+            />
             <p className="max-w-xl text-pretty text-lg text-fg-muted">
               15 perguntas, 15 segundos cada. Você começa com 2 vidas ❤️❤️ —
               errou duas, acabou a partida. A cada 5 acertos, ganha uma vida extra.
